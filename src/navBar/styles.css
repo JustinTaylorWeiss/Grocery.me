@@ -1,0 +1,60 @@
+.navBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none;
+}
+
+.navBarFull {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #107917;
+}
+
+.hamburgerMenu{
+  padding: 0;
+  margin: 0 0 0 15vw;
+}
+
+.hamburgerMenuFull{
+  padding: 0;
+  margin: 0 0 0 2vw;
+}
+
+.searchBar {
+  position: absolute;
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 50%;
+}
+
+.login {
+  color: white;
+  background-color: transparent;
+  padding-right: 10px;
+  margin: 20px 0 20px 0;
+}
+
+.signUp {
+  background: white;
+  color: #17b122;
+  margin: 20px 15vw 20px 0;
+}
+
+.signUpFull {
+  background: white;
+  color: #107917;
+  margin: 20px 2vw 20px 0;
+}

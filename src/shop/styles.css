@@ -1,0 +1,18 @@
+.featuredProduducts{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transform: translate(-50%, 0);
+  top: 25%;
+  left: 50%;
+  width: 75%;
+}
+
+.featuredHeading{
+  text-align: center;
+  color: #107917;
+  font-size: 2rem;
+}

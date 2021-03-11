@@ -1,0 +1,42 @@
+.inputRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%
+}
+
+.logSignWrapper {
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 25%;
+  left: 50%;
+  padding: 20px;
+  width: 25%;
+  border-radius: 10px;
+}
+
+.logSignText {
+    text-align: left;
+    color: #17b122;
+    font-size: 2rem;
+    margin: auto;
+    width: 80%;
+}
+
+.logSignInput {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 5px auto 5px auto;
+  width: 75%;
+}
+
+.logSignlogin {
+  color: #17b122;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}

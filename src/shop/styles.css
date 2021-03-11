@@ -1,18 +1,22 @@
-.featuredProduducts{
-  position: absolute;
+.featuredProduductsCollum{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+}
+
+.featuredProduductsRow{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 0;
-  transform: translate(-50%, 0);
-  top: 25%;
-  left: 50%;
-  width: 75%;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .featuredHeading{
   text-align: center;
-  color: #107917;
-  font-size: 2rem;
+  color: #17b122;
+  font-size: 2.5rem;
 }

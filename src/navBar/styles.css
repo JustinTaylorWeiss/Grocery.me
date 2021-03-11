@@ -9,23 +9,36 @@
 }
 
 .navBarFull {
-  position: relative;
+  position: sticky;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #107917;
+  background-color: #17b122;
 }
 
-.hamburgerMenu{
+.hamburgerMenuIcon{
   padding: 0;
+  width: 3%;
   margin: 0 0 0 15vw;
 }
 
-.hamburgerMenuFull{
+.hamburgerMenuIconFull{
   padding: 0;
+  width: 3%;
   margin: 0 0 0 2vw;
+}
+
+.shoppingCart {
+  padding: 0;
+  width: 50px;
+  margin-left: 15px;
+}
+
+.cartCount {
+    color: white;
+    font-size: 2.2rem;
 }
 
 .searchBar {
@@ -38,6 +51,14 @@
   left: 50%;
   top: 50%;
   width: 50%;
+}
+
+.signUpLogInWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vw 0 0;
 }
 
 .login {
@@ -56,5 +77,5 @@
 .signUpFull {
   background: white;
   color: #107917;
-  margin: 20px 2vw 20px 0;
+  margin: 20px 0vw 20px 0;
 }

@@ -1,0 +1,72 @@
+table {
+    width: 20vw;
+    border-collapse: collapse;
+    color: #17b122;
+    margin: auto;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #17b122;
+}
+
+tr:hover {
+    background-color: #d6d6d6;
+}
+
+.productTitle {
+    text-align: center;
+    font-size: 4rem;
+    color: #17b122;
+}
+
+.sizesContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.tableWrapper {
+    min-width: 30vw;
+    min-height: 30vw;
+}
+
+.heading:hover {
+    background-color: transparent;
+}
+
+.tableHead1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #17b122;
+}
+
+.tableHead2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #17b122;
+}
+
+.quantityInput {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0 10px 0 10px;
+    color: #17b122;
+    width: 30px;
+}
+
+.productPhoto {
+    width: 30vw;
+}
+
+.productDesciption {
+    width: 60vw;
+    margin: 0 auto 50px auto;
+    color: #108518
+}

@@ -18,15 +18,16 @@
   background-color: #17b122;
 }
 
-.hamburgerMenuIcon{
-  padding: 0;
-  width: 3%;
-  margin: 0 0 0 15vw;
+.hamburgerHomeWrapperFull{
+  margin: 0;
 }
 
-.hamburgerMenuIconFull{
-  padding: 0;
-  width: 3%;
+.hamburgerHomeWrapper{
+  margin: 0 0 0 13vw;
+}
+
+.hamburgerHomeIcon{
+  padding-left: 0;
   margin: 0 0 0 2vw;
 }
 

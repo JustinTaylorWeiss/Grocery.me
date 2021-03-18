@@ -1,0 +1,56 @@
+.cartTable {
+    min-width: 50vw;
+}
+
+.cartWarning {
+    text-align: center;
+    font-size: 2rem;
+    color: #17b122;
+    margin-top: 20px;
+}
+
+.name {
+    width: 40%;
+    text-align: left;
+}
+
+.center {
+    width: 15%;
+    text-align: center;
+}
+
+.plusMinus {
+    font-size: 1rem;
+    padding: 0;
+    margin: 5px;
+    width: 1vw;
+    height: 1vw;
+}
+
+.remove {
+    background-color: #c41010;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0px;
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.price {
+    width: 15%;
+    text-align: right;
+}
+
+.total{
+    font-size: 1.2rem;
+}
+
+.totalPrice {
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.centerButton {
+    margin-top: 100px;
+    text-align: center;
+}

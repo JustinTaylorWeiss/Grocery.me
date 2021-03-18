@@ -2,7 +2,8 @@ import hero from './assets/hero.jpg'
 import groceryMeLogo from './assets/groceryMeLogo.png'
 import { NavBar } from '../navBar';
 
-export const SignUp = ({updatePage}) => <>
+export const SignUp = ({updatePage, cart}) => <>
+    <NavBar fullWidth={false} updatePage={updatePage} cart={cart}/>
     <div className="Background"/>
     <div className="logSignWrapper">
         <div className="ctaText">Sign up its free!</div><br/>

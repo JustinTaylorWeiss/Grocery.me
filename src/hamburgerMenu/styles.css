@@ -1,7 +1,7 @@
 .hamburgerMenuHidden{
     position: fixed;
     left: -25%;
-    width: 20vw;
+    width: 18.5vw;
     height: 100vh;
     overflow-y: scroll;
     background-color: #17b122;
@@ -10,7 +10,7 @@
 .hamburgerMenuIn{
     position: fixed;
     left: 0px;
-    width: 20vw;
+    width: 18.5vw;
     height: 100vh;
     overflow-y: scroll;
     background-color: #17b122;
@@ -21,7 +21,7 @@
 .hamburgerMenuOut{
     position: fixed;
     left: -25%;
-    width: 20vw;
+    width: 18.5vw;
     height: 100vh;
     overflow-y: scroll;
     background-color: #17b122;

@@ -1,0 +1,69 @@
+.hamburgerMenuHidden{
+    position: fixed;
+    left: -25%;
+    width: 18.5vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #17b122;
+}
+
+.hamburgerMenuIn{
+    position: fixed;
+    left: 0px;
+    width: 18.5vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #17b122;
+    animation: 0.5s;
+    animation-name: slidein;
+}
+
+.hamburgerMenuOut{
+    position: fixed;
+    left: -25%;
+    width: 18.5vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #17b122;
+    animation: 0.5s;
+    animation-name: slideout;
+}
+
+.hamburgerSpacer {
+    height: 5vh;
+}
+
+.hamburgerHeading {
+    color: white;
+    font-size: 3.7rem;
+    padding: 2vh 0 10px 15px;
+}
+
+.hamburgerListItem {
+    color: white;
+    font-size: 2.5rem;
+    padding: 15px 0 0 15px;
+}
+
+.hamburgerText {
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 0 0 15px;
+}
+
+.hamburgerListItem:hover {
+    color: #6f6f6f;
+    font-size: 2.5rem;
+    padding: 15px 0 0 15px;
+    cursor: pointer;
+}
+
+@keyframes slidein {
+  from {left: -25%;}
+  to {left: 0%;}
+}
+
+@keyframes slideout {
+  from {left: 0%;}
+  to {left: -25%;}
+}

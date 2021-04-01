@@ -45,6 +45,19 @@
     padding: 15px 0 0 15px;
 }
 
+.hamburgerText {
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 0 0 15px;
+}
+
+.hamburgerListItem:hover {
+    color: #6f6f6f;
+    font-size: 2.5rem;
+    padding: 15px 0 0 15px;
+    cursor: pointer;
+}
+
 @keyframes slidein {
   from {left: -25%;}
   to {left: 0%;}

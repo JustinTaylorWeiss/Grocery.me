@@ -160,6 +160,32 @@ export const mapItemToAltSizeIds = {
     7: [7,113,114],
     8: [8,115,116],
 }
+export const mapAltSizeIdsToItem = {
+    1:   1,
+    101: 1,
+    102: 1,
+    2:   2,
+    103: 2,
+    104: 2,
+    3:   3,
+    105: 3,
+    106: 3,
+    4:   4,
+    107: 4,
+    108: 4,
+    5:   5,
+    109: 5,
+    110: 5,
+    6:   6,
+    111: 6,
+    112: 6,
+    7:   7,
+    113: 7,
+    114: 7,
+    8:   8,
+    115: 8,
+    116: 8,
+}
 
 export const mapAltSizeIdToSize = {
     1: "1 Pint",

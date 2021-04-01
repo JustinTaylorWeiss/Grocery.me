@@ -24,7 +24,6 @@
 .itemNameText {
     color: #17b122;
     background-color: transparent;
-    width: 100%;
     font-size: 2rem;
     margin: 0;
     padding: 0;
@@ -36,6 +35,18 @@
     margin: 0;
     width: 50%;
     padding: 0;
+}
+
+.nameSpacer {
+    width: 20px;
+    height: 20px;
+}
+
+.nameWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .itemButton {

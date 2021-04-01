@@ -5,7 +5,7 @@ import shoppingCart from './assets/shoppingCart.svg';
 
 import { HamburgerMenu } from '../hamburgerMenu';
 
-export const NavBar = ({fullWidth, updatePage, cart}) => {
+export const NavBar = ({fullWidth, updatePage, cart, favorites, updateFavorites}) => {
 
     const [hamburger, updateHamburger] = React.useState(false);
     const [firstLoad, updateFirstLoad] = React.useState(true);
@@ -22,7 +22,7 @@ export const NavBar = ({fullWidth, updatePage, cart}) => {
     const cartCount = fullWidth ? cart.reduce((a, e) => a+(e[1]*1), 0) : 0;
 
     return <>
-        <HamburgerMenu updatePage={updatePage} hamburger={hamburger} firstLoad={firstLoad}/>
+        <HamburgerMenu updatePage={updatePage} hamburger={hamburger} firstLoad={firstLoad} favorites={favorites} updateFavorites={updateFavorites}/>
         <div className={navBarClass}>
             <div className={hamburgerHomeClass}>
                 <img className="hamburgerHomeIcon" src={hamburgerIcon} alt="Menu" height="50" width="50" onClick={hamburgerOnClick}/>

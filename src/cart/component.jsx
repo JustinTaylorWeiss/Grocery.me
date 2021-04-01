@@ -2,23 +2,19 @@ import React from 'react';
 import { itemDB, mapAltSizeIdToSize } from '../LocalDB/itemDB';
 import { NavBar } from '../navBar';
 
-export const Cart = ({updatePage, cart, updateCart}) => {
+export const Cart = ({updatePage, cart, updateCart, favorites, updateFavorites}) => {
 
     const [totalCost, updateTotalCost] = React.useState(0);
 
-    /*
-    const updateStacks = () => {
-        updateCart(
-            cart.reduce((a, e) => (
-                !a.find((ae) => e[0] === ae[0]) ?
-                    [...a, e] :
-                    a.map((ae) => ae === e ? [ae[0], ae[1]+e[1]] : ae)
-            ), [])
-        )
-    };
+    const mappings = new Map();
+    for (const [id, c] of cart) {
+      if (mappings.has(id))
+        mappings.set(mappings.get(id) + c);
+      else
+        mappings.set(id, c);
+    }
+    const pairs = mappings.entries();
 
-    updateStacks();
-    */
     const calculateTotal = () => Math.round(cart.reduce((a, [i, c]) => a+c*itemDB.price[i], 0) * 100) / 100;
 
     const plusOneToElement = (i) => (
@@ -38,7 +34,7 @@ export const Cart = ({updatePage, cart, updateCart}) => {
     )
 
     return <>
-        <NavBar fullWidth={true} updatePage={updatePage} cart={cart}/>
+        <NavBar fullWidth={true} updatePage={updatePage} cart={cart} favorites={favorites} updateFavorites={updateFavorites}/>
         <h1 className="productTitle"> Your Cart </h1>
         <div className="cartWrapper">
             <table className="cartTable">
@@ -75,7 +71,7 @@ export const Cart = ({updatePage, cart, updateCart}) => {
             {cart.length < 1 ? <div className="cartWarning"> Your cart is empty </div> : null}
         </div>
         <div className="centerButton">
-            <button className="checkout" >Checkout</button>
+            <button className="checkoutButton" onClick={() => updatePage("Checkout")}>Checkout</button>
         </div>
     </>
 }

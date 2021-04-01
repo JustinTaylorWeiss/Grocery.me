@@ -51,6 +51,6 @@
 }
 
 .centerButton {
-    margin-top: 100px;
+    margin: 100px auto 50px auto;
     text-align: center;
 }

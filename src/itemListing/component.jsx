@@ -16,8 +16,9 @@ export const ItemListing = ({ itemID, toProductPage, addToCart, favorites, updat
         <img className="itemImage" src={itemDB.images[itemID]} alt={itemDB.names[itemID]} onClick={() => toProductPage(itemID)}/>
         <div className="itemWrapper">
             <div className="nameWrapper">
-                <div className="nameSpacer"/>
+                <div className="longNameSpacer"/>
                 <button className="itemNameText" onClick={() => toProductPage(itemID)}>{itemDB.names[itemID]}</button>
+                <div className="nameSpacer"/>
                 <img className="favoriteStar" width={20} height={20}
                     src={favorites.includes(mapAltSizeIdsToItem[itemID]) ? starSolid : starHollow}
                     alt={favorites.includes(mapAltSizeIdsToItem[itemID]) ? "Solid Star" : "Hollow Star"}

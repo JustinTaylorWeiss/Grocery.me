@@ -38,15 +38,20 @@
 }
 
 .nameSpacer {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
+}
+
+.longNameSpacer {
+    width: 10px;
+    height: 10px;
 }
 
 .nameWrapper {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .itemButton {

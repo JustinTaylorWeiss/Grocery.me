@@ -21,6 +21,13 @@ tr:hover {
     color: #17b122;
 }
 
+.productPageNameWrapper {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
 .sizesContainer {
     display: flex;
     flex-direction: row;

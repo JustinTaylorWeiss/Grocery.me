@@ -1,15 +1,33 @@
 import React from 'react';
 import { NavBar } from '../navBar';
-import { itemDB, mapItemToAltSizeIds } from '../LocalDB/itemDB';
+import { itemDB, mapItemToAltSizeIds, mapAltSizeIdsToItem } from '../LocalDB/itemDB';
+import starHollow from './assets/starH.svg';
+import starSolid from './assets/starS.svg';
 
-export const ProductPage = ({ itemID, updatePage, cart, updateCart }) => {
+export const ProductPage = ({ itemID, updatePage, cart, updateCart, favorites, updateFavorites}) => {
 
     const pricesObj = itemDB.prices[itemID];
     const addToCart = (index, quantity) => updateCart([...cart, [mapItemToAltSizeIds[itemID][index], quantity]]);
 
+    const updateFav = () => {
+        if(favorites.includes(mapAltSizeIdsToItem[itemID]))
+            updateFavorites(favorites.filter((id) => id !== mapAltSizeIdsToItem[itemID]));
+        else
+            if(!favorites.includes(mapAltSizeIdsToItem[itemID]))
+                updateFavorites([...favorites, mapAltSizeIdsToItem[itemID]]);
+    }
+
     return <>
-        <NavBar fullWidth={true} updatePage={updatePage} cart={cart}/>
-        <h1 className="productTitle">{itemDB.names[itemID]}</h1>
+        <NavBar fullWidth={true} updatePage={updatePage} cart={cart} favorites={favorites} updateFavorites={updateFavorites}/>
+        <div className="productPageNameWrapper">
+            <h1 className="productTitle">{itemDB.names[itemID]}</h1>
+            <div className="nameSpacer"/>
+            <img className="favoriteStar" width={40} height={40}
+                src={favorites.includes(mapAltSizeIdsToItem[itemID]) ? starSolid : starHollow}
+                alt={favorites.includes(mapAltSizeIdsToItem[itemID]) ? "Solid Star" : "Hollow Star"}
+                onClick={updateFav}
+            />
+        </div>
         <div className="sizesContainer">
             <aside className="tableWrapper">
                 <h1 className="tableHead1">Select a size</h1>

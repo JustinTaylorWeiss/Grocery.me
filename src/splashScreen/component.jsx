@@ -3,10 +3,10 @@ import groceryMeLogo from './assets/groceryMeLogo.png'
 
 import { NavBar } from '../navBar';
 
-export const SplashScreen = ({updatePage}) => {
+export const SplashScreen = ({updatePage, favorites, updateFavorites}) => {
   const onClick = () => updatePage("Shop");
   return <>
-    <NavBar fullWidth={false} updatePage={updatePage}/>
+    <NavBar fullWidth={false} updatePage={updatePage} favorites={favorites} updateFavorites={updateFavorites}/>
     <div className="Background"/>
     <div className="ctaWrapper">
         <div className="ctaText">Find Food Near You</div><br/>

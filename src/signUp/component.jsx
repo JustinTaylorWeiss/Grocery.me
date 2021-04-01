@@ -2,7 +2,7 @@ import hero from './assets/hero.jpg'
 import groceryMeLogo from './assets/groceryMeLogo.png'
 import { NavBar } from '../navBar';
 
-export const SignUp = ({updatePage, cart}) => <>
+export const SignUp = ({updatePage, cart, favorites, updateFavorites}) => <>
     <NavBar fullWidth={false} updatePage={updatePage} cart={cart}/>
     <div className="Background"/>
     <div className="logSignWrapper">

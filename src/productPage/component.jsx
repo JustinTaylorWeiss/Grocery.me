@@ -5,6 +5,16 @@ import starHollow from './assets/starH.svg';
 import starSolid from './assets/starS.svg';
 
 export const ProductPage = ({ itemID, updatePage, cart, updateCart, favorites, updateFavorites}) => {
+    
+    const [product, updateProduct] = React.useState(null);
+    React.useEffect(() => {
+        (async () => {
+            const response = await fetch(`https://i57jtf4g8l.execute-api.us-east-1.amazonaws.com/dev/products/${itemID}`);
+            const body = await response.json();
+            updateProduct(body.product);
+        })()
+    }, [itemID])
+    console.log(product);
 
     const pricesObj = itemDB.prices[itemID];
     const addToCart = (index, quantity) => updateCart([...cart, [mapItemToAltSizeIds[itemID][index], quantity]]);

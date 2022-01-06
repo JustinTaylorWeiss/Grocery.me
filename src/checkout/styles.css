@@ -28,12 +28,32 @@
     width: 100%;
 }
 
+.savedInfoCheckBox {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.paymentLabelTextSmall {
+    text-align: center;
+    color: #17b122;
+    font-size: 1.2rem;
+    margin: 20px auto 20px auto;
+    width: 100%;
+}
+
 .paymentLabelTextC {
     text-align: center;
     color: #17b122;
     font-size: 1.5rem;
     margin: auto;
     width: 100%;
+}
+
+.discountCodeInput {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 5px 0 5px 15px;
+  width: 50%;
 }
 
 .paymentLabelTextRed {
@@ -94,6 +114,7 @@
     background-color: lightgray;
     margin: auto;
     margin-bottom: 20px;
+    margin-top: 20px;
     padding: 20px 5px 20px 5px;
     width: 75%;
     border-radius: 10px;
@@ -124,11 +145,15 @@
 
 .checkoutButton {
     text-align: center;
-    margin: 10px auto 40px auto;
+    margin: 10px auto 10px auto;
 }
 
 .checkoutProductTitle {
     text-align: center;
     font-size: 3rem;
     color: #17b122;
+}
+
+.checkoutSpacer {
+  height: 50px;
 }

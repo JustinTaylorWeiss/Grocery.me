@@ -31,6 +31,12 @@
   margin: 0 0 0 2vw;
 }
 
+.pinIcon{
+  padding-left: 0;
+  margin: 0;
+  margin-left: calc(2vw - 10px);
+}
+
 .shoppingCart {
   padding: 0;
   width: 50px;
@@ -69,6 +75,15 @@
   margin: 20px 0 20px 0;
 }
 
+.userName {
+  color: white;
+  cursor: default;
+  font-size: 1rem;
+  background-color: transparent;
+  padding-right: 10px;
+  margin: 20px 0 20px 0;
+}
+
 .signUp {
   background: white;
   color: #17b122;
@@ -78,5 +93,19 @@
 .signUpFull {
   background: white;
   color: #107917;
+  margin: 20px 0vw 20px 0;
+}
+
+.signOut {
+  background: white;
+  color: #17b122;
+  padding: 10px;
+  margin: 20px 15vw 20px 0;
+}
+
+.signOutFull {
+  background: white;
+  color: #17b122;
+  padding: 10px;
   margin: 20px 0vw 20px 0;
 }

@@ -1,3 +1,4 @@
+// I Justin Weiss R01918238 certify that this submission is my own origional work.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

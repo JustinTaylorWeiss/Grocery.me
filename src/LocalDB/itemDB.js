@@ -1,3 +1,4 @@
+// I Justin Weiss R01918238 certify that this submission is my own origional work.
 import blueberry from './assets/Blueberries.jpg';
 import strawberry from './assets/Strawberries.jpg';
 import carrot from './assets/Carrots.jpg';

@@ -1,12 +1,15 @@
+// I Justin Weiss R01918238 certify that this submission is my own origional work.
 import React from 'react';
 import { NavBar } from '../navBar';
+import { SupportPhone } from '../supportPhone'
 import { itemDB, mapItemToAltSizeIds, mapAltSizeIdsToItem } from '../LocalDB/itemDB';
 import starHollow from './assets/starH.svg';
 import starSolid from './assets/starS.svg';
 
 export const ProductPage = ({ itemID, updatePage, cart, updateCart, favorites, updateFavorites}) => {
-    
+
     const [product, updateProduct] = React.useState(null);
+    /*
     React.useEffect(() => {
         (async () => {
             const response = await fetch(`https://i57jtf4g8l.execute-api.us-east-1.amazonaws.com/dev/products/${itemID}`);
@@ -15,6 +18,7 @@ export const ProductPage = ({ itemID, updatePage, cart, updateCart, favorites, u
         })()
     }, [itemID])
     console.log(product);
+    */
 
     const pricesObj = itemDB.prices[itemID];
     const addToCart = (index, quantity) => updateCart([...cart, [mapItemToAltSizeIds[itemID][index], quantity]]);
@@ -29,6 +33,7 @@ export const ProductPage = ({ itemID, updatePage, cart, updateCart, favorites, u
 
     return <>
         <NavBar fullWidth={true} updatePage={updatePage} cart={cart} favorites={favorites} updateFavorites={updateFavorites}/>
+        <SupportPhone/>
         <div className="productPageNameWrapper">
             <h1 className="productTitle">{itemDB.names[itemID]}</h1>
             <div className="nameSpacer"/>

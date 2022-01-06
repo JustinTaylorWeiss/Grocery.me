@@ -1,6 +1,8 @@
+// I Justin Weiss R01918238 certify that this submission is my own origional work.
 import React from 'react';
 import { itemDB, mapAltSizeIdToSize } from '../LocalDB/itemDB';
 import { NavBar } from '../navBar';
+import { SupportPhone } from '../supportPhone'
 
 export const Cart = ({updatePage, cart, updateCart, favorites, updateFavorites}) => {
 
@@ -35,6 +37,7 @@ export const Cart = ({updatePage, cart, updateCart, favorites, updateFavorites})
 
     return <>
         <NavBar fullWidth={true} updatePage={updatePage} cart={cart} favorites={favorites} updateFavorites={updateFavorites}/>
+        <SupportPhone/>
         <h1 className="productTitle"> Your Cart </h1>
         <div className="cartWrapper">
             <table className="cartTable">
@@ -47,16 +50,16 @@ export const Cart = ({updatePage, cart, updateCart, favorites, updateFavorites})
                         <th className="price"><b>Price</b></th>
                     </tr>
                     {
-                        cart.map(([id, count], i) => <tr id={`${i}`}>
-                                <th id={`${i}-1`} className="name">{itemDB.names[id]}</th>
-                                <th id={`${i}-2`} className="center">{mapAltSizeIdToSize[id]}</th>
-                                <th id={`${i}-3`} className="center">
-                                    <button id={`${i}-`} className="plusMinus" onClick={() => minusOneToElement(i)}>-</button>
+                        cart.map(([id, count], i) => <tr key={`${i}`}>
+                                <th key={`${i}-1`} className="name">{itemDB.names[id]}</th>
+                                <th key={`${i}-2`} className="center">{mapAltSizeIdToSize[id]}</th>
+                                <th key={`${i}-3`} className="center">
+                                    <button key={`${i}-`} className="plusMinus" onClick={() => minusOneToElement(i)}>-</button>
                                     {count}
-                                    <button id={`${i}+`} className="plusMinus" onClick={() => plusOneToElement(i)}>+</button>
+                                    <button key={`${i}+`} className="plusMinus" onClick={() => plusOneToElement(i)}>+</button>
                                 </th>
-                                <th id={`${i}-4`} className="center"><button id={`${i}x`} className="remove" onClick={() => removeFromCart(i)}>x</button></th>
-                                <th id={`${i}-5`} className="price">${Math.round(itemDB.price[id] * count * 100) / 100}</th>
+                                <th key={`${i}-4`} className="center"><button key={`${i}x`} className="remove" onClick={() => removeFromCart(i)}>x</button></th>
+                                <th keyd={`${i}-5`} className="price">${(Math.round(itemDB.price[id] * count * 100) / 100).toFixed(2)}</th>
                         </tr>)
                     }
                     {cart.length > 0 ? <tr>

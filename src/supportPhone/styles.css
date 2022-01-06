@@ -1,0 +1,28 @@
+.stickyFooter{
+  position: sticky;
+  display: block;
+  top: calc(100vh - 0px);
+  margin: 0;
+  width: 100%;
+  height: 0px;
+}
+
+.supportText {
+  display: inline;
+  position: absolute;
+  bottom: -60px;
+  right: 50px;
+  color: white;
+  background-color: #17b122;
+  margin: 0;
+  font-size: 1.5rem;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+  text-align: center;
+
+  transition: bottom 0.25s linear;
+}
+
+.supportText:hover {
+  bottom: 0px;
+}

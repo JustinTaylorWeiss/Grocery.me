@@ -1,3 +1,4 @@
+/*I Justin Weiss R01918238 certify that this submission is my own origional work.*/
 button {
     display: inline-block;
     border: none;
@@ -26,6 +27,7 @@ button:focus {
 }
 
 .App {
+  min-height: 100vh;
 }
 
 .App-header {

@@ -1,4 +1,8 @@
+// I Justin Weiss R01918238 certify that this submission is my own origional work.
 import React from 'react';
+import { AuthDataContext } from './auth';
+import { useCartData, useFavoriteData } from './cartFavContext';
+import { useAuthData } from './auth';
 import './App.css';
 
 import { SplashScreen } from './splashScreen';
@@ -8,18 +12,21 @@ import { SignUp } from './signUp';
 import { ProductPage } from './productPage';
 import { Cart } from './cart';
 import { Checkout } from './checkout';
-import {OrderConfirmation} from './orderConfirmation';
+import { OrderConfirmation } from './orderConfirmation';
 
 function App() {
   const [page, updatePage] = React.useState("Splash");
   const [currentID, updateCurrentID] = React.useState(0);
-  const [cart, updateCart] = React.useState([]);
-  const [favorites, updateFavorites] = React.useState([]);
+  const cartDataState = useCartData();
+  const [cart, updateCart] = cartDataState;
+  const cartFavoriteState = useFavoriteData();
+  const [favorites, updateFavorites] = cartFavoriteState;
+  const appDataState = useAuthData();
 
-  return <>
+  return <AuthDataContext.Provider value={appDataState}>
     <div className="App">
       {
-        page === "Shop" ?
+        page === "Shop"?
         <Shop
             updatePage={updatePage}
             cart={cart}
@@ -56,10 +63,11 @@ function App() {
         <OrderConfirmation
             updatePage={updatePage}
             cart={cart}
+            updateCart={updateCart}
             favorites={favorites}
             updateFavorites={updateFavorites}
         /> :
-        page === "Login"  ?
+        page === "Login" ?
         <Login
             updatePage={updatePage}
             cart={cart}
@@ -79,10 +87,10 @@ function App() {
             favorites={favorites}
             updateFavorites={updateFavorites}
         /> :
-        <null/>
+        null
       }
     </div>
-  </>;
+  </AuthDataContext.Provider>;
 }
 
 export default App;

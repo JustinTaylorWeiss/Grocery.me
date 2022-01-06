@@ -1,3 +1,4 @@
+// I Justin Weiss R01918238 certify that this submission is my own origional work.
 import { itemDB, mapAltSizeIdsToItem } from '../LocalDB/itemDB';
 import starHollow from './assets/starH.svg';
 import starSolid from './assets/starS.svg';

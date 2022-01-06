@@ -36,7 +36,7 @@
 .hamburgerHeading {
     color: white;
     font-size: 3.7rem;
-    padding: 2vh 0 10px 15px;
+    padding: 40px 0 10px 15px;
 }
 
 .hamburgerListItem {
@@ -49,6 +49,17 @@
     color: white;
     font-size: 1.5rem;
     padding: 15px 0 0 15px;
+}
+
+.resetLocationButton {
+  position: relative;
+  transform: translate(-50%, 0);
+  left: 50%;
+  background: white;
+  color: #17b122;
+  width: 50%;
+  font-size: 1rem;
+  margin: 40px auto 0 auto;
 }
 
 .hamburgerListItem:hover {
